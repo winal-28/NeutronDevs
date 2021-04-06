@@ -1,0 +1,52 @@
+$backgroundColorLevel1: #212121;
+$backgroundColorLevel2: #282828;
+$backgroundColorLevel3: #404040;
+$backgroundColorLevel4: #505050;
+$neutralTextColor: lightgrey;
+$accentColor: #19dafa;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: $backgroundColorLevel1;
+}
+nav {
+  display: flex;
+  background: $backgroundColorLevel2;
+  height: 10vh;
+  padding: 0 10%;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.164);
+  font-size: 1.2rem;
+  .logo {
+    color: $accentColor;
+  }
+  .joinServer {
+    text-decoration: none;
+    color: $accentColor;
+    border: solid 2px $accentColor;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    &:hover {
+      background: $accentColor;
+      color: $neutralTextColor;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  nav {
+    padding: 0 5%;
+    font-size: 1rem;
+    .joinServer {
+      padding: 10px;
+    }
+  }
+}
